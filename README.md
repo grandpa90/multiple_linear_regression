@@ -6,7 +6,7 @@ This project is focused on learning machine learning techniques and implementing
 
 ## Overview
 
-Explain briefly what your project is about. Describe the goals and objectives of your machine learning journey.
+This Project focus on multiple linear regression Model
 
 ## Table of Contents
 
