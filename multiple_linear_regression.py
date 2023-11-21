@@ -40,8 +40,35 @@ regressor.fit(X_train, y_train)
 print(f"COOF: {regressor.coef_}")
 print(f"INTERCEPT: {regressor.intercept_}")
 
-
 y_pred = regressor.predict(X_test)
+
+
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot(111, projection='3d')
+
+# Scatter plot of the actual data
+ax.scatter(X_test[:, 0], X_test[:, 1], y_test, label='Actual data', c='blue', marker='o')
+
+# Scatter plot of the predicted data
+ax.scatter(X_test[:, 0], X_test[:, 1], y_pred, label='Predicted data', c='red', marker='^')
+
+# ax.set_xlabel('Feature 1')
+# ax.set_ylabel('Feature 2')
+ax.set_zlabel('Profit')
+ax.set_title('3D Scatter Plot of Actual and Predicted Data')
+
+plt.legend()
+plt.show()
+
+# sns.scatterplot(x=X_test[:, 0], y=y_test, label='Actual data')
+
+# Plot the regression line
+# sns.lineplot(x=X_test[:, 0], y=y_pred, color='red', label='Regression line')
+
+# plt.xlabel('Feature 1')
+# plt.ylabel('Target variable')
+# plt.legend()
+# plt.show()
 # better printing 
 np.set_printoptions(precision=2)
 # reshaping the predictions value and reel values to be vertical vectors
